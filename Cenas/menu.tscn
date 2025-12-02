@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://3uhypy3yiirm"]
+
+[ext_resource type="Script" uid="uid://bvei0vivbdmpv" path="res://Scripts/play.gd" id="1_pveh2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1n12"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+scale = Vector2(1.1013943, 0.7268829)
+
+[node name="titulo" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 496.0
+offset_top = 106.0
+offset_right = 715.0
+offset_bottom = 136.0
+text = "Gear Run"
+label_settings = SubResource("LabelSettings_u1n12")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="botoes" type="VBoxContainer" parent="."]
+texture_filter = 1
+offset_left = 406.00003
+offset_top = 157.0
+offset_right = 644.0
+offset_bottom = 280.0
+scale = Vector2(1.6736696, 1.5877975)
+
+[node name="play" type="Button" parent="botoes"]
+layout_mode = 2
+text = "Jogar"
+script = ExtResource("1_pveh2")
+
+[node name="quit" type="Button" parent="botoes"]
+layout_mode = 2
+text = "Sair"
+
+[connection signal="pressed" from="botoes/play" to="botoes/play" method="_on_pressed_play"]
