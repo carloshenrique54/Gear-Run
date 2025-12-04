@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-const SPEED = 250
-const JUMP_FORCE = -400
-const WALL_JUMP_PUSH = 300
-const WALL_SLIDE_SPEED = 80
+const SPEED = 180
+const JUMP_FORCE = -300
+const WALL_JUMP_PUSH = 200
+const WALL_SLIDE_SPEED = 60
 var gravity = 900
 
 @onready var anim = $spr_player
