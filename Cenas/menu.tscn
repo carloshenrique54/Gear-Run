@@ -7,8 +7,8 @@
 [node name="Menu" type="Node2D"]
 
 [node name="background" type="TextureRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1045.9469
+offset_bottom = 892.8536
 scale = Vector2(1.1013943, 0.7268829)
 
 [node name="titulo" type="Label" parent="."]

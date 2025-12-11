@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgbriuvj2f1y2"]
+
+[ext_resource type="Script" uid="uid://d035jf40m2eg1" path="res://rigid_body_2d.gd" id="1_27yxk"]
+[ext_resource type="Texture2D" uid="uid://bbpbdsq0fvxae" path="res://TileMaps/tile_set_fase2_4.png" id="2_ycann"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_af6wy"]
+size = Vector2(48, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqjbv"]
+size = Vector2(48, 20)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 8
+script = ExtResource("1_27yxk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_ycann")
+region_enabled = true
+region_rect = Rect2(48.08628, 16.534739, 48.178436, 8.495104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_af6wy")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["MataPlayer"]]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_wqjbv")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

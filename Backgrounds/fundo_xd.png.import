@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd1t1ekeciyuj"
-path="res://.godot/imported/tile_set_fase1.png-48987d12efec41df26910accacc0d83a.ctex"
+uid="uid://4vk6gmc337mx"
+path="res://.godot/imported/fundo_xd.png-0f4c0ced4df3557e7d16a47a2b784f59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileMaps/tile_set_fase1.png"
-dest_files=["res://.godot/imported/tile_set_fase1.png-48987d12efec41df26910accacc0d83a.ctex"]
+source_file="res://Backgrounds/fundo_xd.png"
+dest_files=["res://.godot/imported/fundo_xd.png-0f4c0ced4df3557e7d16a47a2b784f59.ctex"]
 
 [params]
 
